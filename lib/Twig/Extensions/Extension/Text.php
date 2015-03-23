@@ -39,7 +39,7 @@ class Twig_Extensions_Extension_Text extends Twig_Extension
 }
 
 if (function_exists('mb_get_info')) {
-    function twig_truncate_filter(Twig_Environment $env, $value, $length = 30, $preserve = false, $separator = '...')
+    function twig_truncate_filter(Twig_Environment $env, $value, $length = 30, $preserve = false, $separator = '…')
     {
         if (mb_strlen($value, $env->getCharset()) > $length) {
             if ($preserve) {
@@ -79,7 +79,7 @@ if (function_exists('mb_get_info')) {
         return implode($separator, $sentences);
     }
 } else {
-    function twig_truncate_filter(Twig_Environment $env, $value, $length = 30, $preserve = false, $separator = '...')
+    function twig_truncate_filter(Twig_Environment $env, $value, $length = 30, $preserve = false, $separator = '…')
     {
         if (strlen($value) > $length) {
             if ($preserve) {
